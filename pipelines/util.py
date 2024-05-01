@@ -34,13 +34,13 @@ def load_saved_artifacts():
         current_dir = os.path.dirname(__file__)
 
         # Path to columns.json
-        columns_json_path = os.path.join(current_dir, 'artifacts', 'columns.json')
+        columns_json_path = os.path.join(current_dir,'..', 'artifacts', 'columns.json')
         with open(columns_json_path, 'r') as f:
             __data_columns = json.load(f)['data_columns']
             __locations = __data_columns[3:]  # first 3 columns are sqft, bath, bhk
 
         # Path to model.pickle
-        model_pickle_path = os.path.join(current_dir, 'artifacts', 'model.pickle')
+        model_pickle_path = os.path.join(current_dir,'..', 'artifacts', 'model.pickle')
         global __model
         with open(model_pickle_path, 'rb') as f:
             __model = pickle.load(f)

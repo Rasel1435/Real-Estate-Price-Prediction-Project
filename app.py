@@ -1,7 +1,25 @@
-from flask import Flask, request, jsonify
-import util
+from flask import Flask, request, jsonify, render_template
+from pipelines import util
 
 app = Flask(__name__)
+
+
+# Route for serving the app.html file
+@app.route('/')
+def app_html():
+    return render_template('app.html')
+
+# Route for the root URL
+# @app.route('/')
+# def index():
+#     # URLs to be displayed
+#     urls_message = "API Endpoints:<br>"\
+#                    "1. Get Location Names: <a href='/get_location_names'>/get_location_names</a><br>"\
+#                    "2. Predict Home Price: <a href='/predict_home_price'>/predict_home_price</a><br>"\
+#                    "3. Web Applications: <a href='/app.html'>/app.html</a><br>"
+
+#     # Return welcome message with URLs
+#     return "Welcome to Home Price Prediction Server<br>" + urls_message
 
 @app.route('/get_location_names', methods=['GET'])
 def get_location_names():
