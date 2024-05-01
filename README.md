@@ -7,3 +7,5 @@ This data science project series walks through the step-by-step process of how t
 - Jupyter notebook, visual studio code and pycharm as IDE
 - Python flask for HTTP server
 - HTML/CSS/Javascript for UI
+
+![Image Description](static/img/output.PNG)
