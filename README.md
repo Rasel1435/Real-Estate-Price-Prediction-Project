@@ -8,5 +8,5 @@ This data science project series walks through the step-by-step process of how t
 - Python flask for HTTP server
 - HTML/CSS/Javascript for UI
 
-# Real-Time Web Application House Prediction
+### Real-Time Web Application House Price Prediction
 ![Image Description](static/img/output.PNG)
