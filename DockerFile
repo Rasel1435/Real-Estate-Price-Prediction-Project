@@ -1,9 +1,6 @@
 # Use official Python image as base
 FROM python:3.10-slim
 
-# Copy the entire project directory into the container
-COPY . /code
-
 # Set working directory
 WORKDIR /code
 
@@ -11,9 +8,13 @@ WORKDIR /code
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy the entire project directory into the container
+COPY . .
 
 # Expose any ports the app is expecting
 EXPOSE 8080
 EXPOSE 5000
 EXPOSE 8237
 EXPOSE 8000
+
+CMD [ "python", "server.py" ]
