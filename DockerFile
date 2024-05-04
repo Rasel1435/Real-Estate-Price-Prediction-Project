@@ -7,19 +7,17 @@ WORKDIR /app
 # Copy the entire project directory into the container
 COPY . /app
 
-# Updating all the packages
-RUN apt update -y && apt install awscli -y 
-
-# Copy requirements.txt and install Python dependencies
-COPY requirements.txt requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+# Updating all the packages and installing dependencies
+RUN apt update -y \
+    && apt install -y awscli \
+    && rm -rf /var/lib/apt/lists/* \
+    && pip install --no-cache-dir -r requirements.txt
 
 # Run the server
-CMD [ "python3", "app.py" ]
+CMD [ "python3", "app.py"]
 
 # Expose any ports the app is expecting
 EXPOSE 8080
 EXPOSE 5000
 EXPOSE 8237
 EXPOSE 8000
-

@@ -2,6 +2,7 @@ import json
 import pickle
 import os
 import numpy as np
+import warnings
 
 __locations = None
 __data_columns = None
@@ -39,6 +40,8 @@ def load_saved_artifacts():
             __data_columns = json.load(f)['data_columns']
             __locations = __data_columns[3:]  # first 3 columns are sqft, bath, bhk
 
+        # Suppress the warning
+        warnings.filterwarnings("ignore", category=UserWarning)
         # Path to model.pickle
         model_pickle_path = os.path.join(current_dir,'..', 'artifacts', 'model.pickle')
         global __model
