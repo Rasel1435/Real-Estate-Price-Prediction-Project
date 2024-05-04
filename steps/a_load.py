@@ -26,11 +26,11 @@ def load_data_from_csv(df):
     
     
 
-if __name__ == '__main__':
-    df = load_data_from_csv()
-    if df is not None:
-        print(f"Data Table: \n {df.head()}\n")
-        logger.info("==> The Data has been loaded successfully...!\n")
-        print(f"Data Shape: \n {df.shape}\n")
-    else:
-        print("Error: Data loading failed. Please check logs for details.")
+# if __name__ == '__main__':
+#     df = load_data_from_csv()
+#     if df is not None:
+#         print(f"Data Table: \n {df.head()}\n")
+#         logger.info("==> The Data has been loaded successfully...!\n")
+#         print(f"Data Shape: \n {df.shape}\n")
+#     else:
+#         print("Error: Data loading failed. Please check logs for details.")
