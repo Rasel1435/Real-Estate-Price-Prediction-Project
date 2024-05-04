@@ -41,16 +41,3 @@ def remove_outliers(df):
         return None
 
 
-# # Test the function
-# if __name__ == '__main__':
-#     try:
-#         df = pd.read_csv('C:/Users/SRA/Desktop/Real-Estate-Price-Prediction-Project/data/Final_Pipelines_Data.csv')
-#         df = remove_outliers(df)
-#         if df is not None:
-#             print(f"Data Table: \n {df.head()}\n")
-#             logger.info("==> Removing outlier Function has been done Successfully...!\n")
-#             print(f"Data Shape: \n {df.shape}\n")
-#         else:
-#             print("Error: Data loading failed. Please check logs for details.")
-#     except FileNotFoundError as e:
-#         print(f"Error: File not found. Please provide the correct file path. Error: {e}")

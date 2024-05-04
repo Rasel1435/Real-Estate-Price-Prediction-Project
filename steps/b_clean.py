@@ -37,16 +37,3 @@ def clean_data(df):
     except Exception as e:
         logger.error(f"==> The Data Cleaning has been Failed: {e}")
         return None
-
-
-
-# # Test the function
-# if __name__ == '__main__':
-#     df = pd.read_csv('C:/Users/SRA/Desktop/Real-Estate-Price-Prediction-Project/data/Final_Pipelines_Data.csv')
-#     df = clean_data(df)
-#     if df is not None:
-#         print(f"Data Table: \n {df.head()}\n")
-#         logger.info("==> The data Cleaning Process has been done Successfully...!\n")
-#         print(f"Data Shape: \n {df.shape}\n")
-#     else:
-#         print("Error: Data loading failed. Please check logs for details.")
