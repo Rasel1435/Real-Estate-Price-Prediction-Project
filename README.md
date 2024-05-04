@@ -59,4 +59,3 @@ This data science project series walks through the step-by-step process of build
 - AWS_SECRET_ACCESS_KEY
 - AWS_REGION = us-east-1
 - AWS_ECR_LOGIN_URI = Remember 2nd step first one elastic container registry
-- 
