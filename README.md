@@ -1,5 +1,5 @@
 # Real Estate Price Prediction Project
-This data science project series walks through the step-by-step process of how to build a real estate price prediction website. We will first build a model using sklearn and linear regression using the Banglore home prices dataset from kaggle.com. The second step would be to write a Python flask server that uses the saved model to serve HTTP requests. The third component is the website built in HTML, CSS, and JavaScript that allows users to enter the home square ft area, bedrooms, etc and it will call the Python flask server to retrieve the predicted price. During model building, we will cover almost all data science concepts such as data load and cleaning, outlier detection and removal, feature engineering, dimensionality reduction, GridsearchCV for hyperparameter tunning, k-fold cross-validation, etc. Technology and tools this project covers -
+This data science project series walks through the step-by-step process of building a real estate price prediction website. We will first build a model using sklearn and linear regression using the Banglore home prices dataset from kaggle.com. The second step would be to write a Python flask server that uses the saved model to serve HTTP requests. The third component is the website built in HTML, CSS, and JavaScript that allows users to enter the home square ft area, bedrooms, etc and it will call the Python flask server to retrieve the predicted price. During model building, we will cover almost all data science concepts such as data load and cleaning, outlier detection and removal, feature engineering, dimensionality reduction, GridsearchCV for hyperparameter tunning, k-fold cross-validation, etc. Technology and tools this project covers -
 - Python
 - Numpy and Pandas for data cleaning
 - Matplotlib for data visualization
@@ -14,26 +14,26 @@ This data science project series walks through the step-by-step process of how t
 
 ## Manage access to AWS resources
 1. Create IAM users with - AmazonEC2ContainerRegistryFullAccess, AmazonEC2FullAccess
-2. Go to inside user and clik the Security Credentails then create a access keys and download csv file
+2. Go to inside user and click the Security Credentials then create an access key and download the CSV file
 
-## Fully-managed Docker container registry : Share and deploy container software, publicly or privately
-1. Go to Elastic Container Registry (ECR) and Create new repository make sure it would be privet then copy the repo URL
+## Fully-managed Docker container registry: Share and deploy container software, publicly or privately
+1. Go to Elastic Container Registry (ECR) and Create a new repository make sure it is private then copy the repo URL
 
 
-# Virtual Servers in the Cloud
+## Virtual Servers in the Cloud
 1. Go to EC2 then click Launch instance
 - give the Name
 - select start like ubuntu
 - Instance type t2.mirco(free version)
-- Key pair (login) you can make it default value or select any previous 
-- Network settings check mark the all Network
+- Key pair (login) you can make it the default value or select any previous 
+- Network settings check to mark all Network
 - Lunch Instance
 - click on Instance ID
 - click on Connect
 - click on Connect
 
-# Docker Setup In EC2 commands to be Executed
-# Install optinal
+## Docker Setup In EC2 commands to be Executed
+### Install optional
 - sudo apt-get update -y
 - sudo apt-get upgrade
 
