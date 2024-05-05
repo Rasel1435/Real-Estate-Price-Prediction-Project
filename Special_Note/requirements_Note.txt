@@ -1,0 +1,6 @@
+# For Run all dependency
+pip install -r requirements.txt
+
+# Create a requirements.txt File based on the project
+pip freeze > requirements.txt
+

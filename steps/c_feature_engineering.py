@@ -3,13 +3,15 @@ import sys
 import pandas as pd
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
+from zenml import step
+from typing import Union
+from config import PROCESSED_DATA_PATH, DATA_SOURCE
 from error_logs import configure_logger
 # Configure logger
 logger = configure_logger()
 
-
-def FeatureEngineering(df):
+@step(name="Feature Engineering", enable_step_logs=True, enable_artifact_metadata=True)
+def FeatureEngineering(df: pd.DataFrame) -> Union[pd.DataFrame, None]:
     try:
         logger.info("==> The Feature Engineering Process has been Started...")
         # Create a new feature to detect outliers
@@ -33,3 +35,8 @@ def FeatureEngineering(df):
         logger.error(f"==> Error: {e}")
         return None
 
+
+# if __name__ == "__main__":
+#     df = pd.read_csv(r'C:/Users/SRA/Desktop/Real-Estate-Price-Prediction-Project/data/Final_Pipelines_Data.csv')
+#     df = FeatureEngineering(df)
+#     df.to_csv(PROCESSED_DATA_PATH, index=False)

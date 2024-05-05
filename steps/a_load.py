@@ -4,13 +4,17 @@ import pandas as pd
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from config import DATA_SOURCE
+from zenml import step
+from typing import Union
+
+from config import DATA_SOURCE, PROCESSED_DATA_PATH
 from error_logs import configure_logger
 # Configure logger
 logger = configure_logger()
 
 # Load the data from CSV file
-def load_data_from_csv(df):
+@step(name="Load Data", enable_step_logs=True, enable_artifact_metadata=True)
+def load_data_from_csv() -> Union[pd.DataFrame, None]:
     try:
         logger.info("==> The Data Loading Starting...")
         df = pd.read_csv(DATA_SOURCE)
@@ -28,9 +32,4 @@ def load_data_from_csv(df):
 
 # if __name__ == '__main__':
 #     df = load_data_from_csv()
-#     if df is not None:
-#         print(f"Data Table: \n {df.head()}\n")
-#         logger.info("==> The Data has been loaded successfully...!\n")
-#         print(f"Data Shape: \n {df.shape}\n")
-#     else:
-#         print("Error: Data loading failed. Please check logs for details.")
+#     df.to_csv(PROCESSED_DATA_PATH, index=False)

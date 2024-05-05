@@ -4,12 +4,16 @@ import pandas as pd
 import numpy as np
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from zenml import step
+from typing import Union
+from config import PROCESSED_DATA_PATH, DATA_SOURCE
 
 from error_logs import configure_logger
 # Configure logger
 logger = configure_logger()
 
-def remove_outliers(df):
+@step(name="Remove Outliers", enable_step_logs=True, enable_artifact_metadata=True)
+def remove_outliers(df: pd.DataFrame) -> Union[pd.DataFrame, None]:
     try:
         logger.info("==> Removing outlier Function has been Started...")
         
@@ -41,3 +45,7 @@ def remove_outliers(df):
         return None
 
 
+# if __name__ == "__main__":
+#     df = pd.read_csv(r'C:/Users/SRA/Desktop/Real-Estate-Price-Prediction-Project/data/Final_Pipelines_Data.csv')
+#     df = remove_outliers(df)
+#     df.to_csv(PROCESSED_DATA_PATH, index=False)
