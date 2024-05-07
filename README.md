@@ -47,14 +47,14 @@ This data science project series walks through the step-by-step process of build
 - go to project settings
 - actions
 - select runners
-- select linux
-- go to download and install step by step 
+- select Linux
+- go to download and install step-by-step 
 - go to configure install as well
-- Enter the name of the runner group to add this runner to: [press Enter for Default] # here just press the Enter
-- Enter the name of runner: [press Enter for ip-172-31-16-106] self-hosted
+- Enter the name of the runner group to add this runner to [press Enter for Default] # here press the Enter
+- Enter the name of the runner: [press Enter for ip-172-31-16-106] self-hosted
 - ./run.sh
 - go to secrets and variables
-- add New secret keys which we donlowd as csv from AWS
+- Add new secret keys which we download as CSV from AWS
 - AWS_ACCESS_KEY_ID
 - AWS_SECRET_ACCESS_KEY
 - AWS_REGION = us-east-1
