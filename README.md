@@ -8,7 +8,7 @@ This data science project walks through the step-by-step process of building a r
 - Python flask for HTTP server
 - HTML/CSS/Javascript for UI
 - MLOps for Pipeline
-- MLFlow to see the score
+- MLFlow to see the ExperimentTracking
 - ZenML to Create ETL Pipeline
 - AWS for deployment
 - Docker for Dockerize to create images
