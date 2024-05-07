@@ -7,6 +7,11 @@ This data science project walks through the step-by-step process of building a r
 - Jupyter notebook, visual studio code and pycharm as IDE
 - Python flask for HTTP server
 - HTML/CSS/Javascript for UI
+- MLOps for Pipeline
+- MLFlow to see the score
+- ZenML to Create ETL Pipeline
+- AWS for deployment
+- Docker for Dockerize to create images
 
 ### Real-Time Web Application House Price Prediction
 ![Image Description](static/img/output.PNG)
